@@ -1,0 +1,39 @@
+.card {
+    padding: 6rem 3rem;
+
+    &__icon-box {
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-blue-2;
+        margin-bottom: 3.5rem;
+        border-radius: 5px;
+        box-shadow: 0.8rem 0.8rem 0 rgba($color-blue-2, 0.1);
+
+    }
+
+    &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: $color-white;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        color: $color-indigo-dark;
+        
+    }
+
+    &__text {
+        font-size: 1.7rem;
+        color: $color-indigo-dark;
+        font-weight: 500;
+    }
+
+    &:hover {
+        background-color: $color-white;
+    }
+}

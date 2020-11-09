@@ -1,0 +1,21 @@
+[data-aos="move-up"] {
+    transform: translateY(1rem);
+    opacity: 0;
+    // animation-timing-function: cubic-bezier(0,1.11,.02,.95);
+    transition-property: transform, opacity;
+    &.aos-animate {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+  }
+
+  [data-aos="show-item"] {
+    opacity: 0;
+    // animation-timing-function: cubic-bezier(0,1.11,.02,.95);
+    transition-property: opacity;
+    &.aos-animate {
+        opacity: 1;
+    }
+
+  }

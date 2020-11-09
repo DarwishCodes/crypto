@@ -1,0 +1,34 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.7rem;
+        padding: 1rem 2rem;
+        border-radius: 3px;
+    }
+
+    &--cyan {
+        border: 2px solid $color-secondry;
+        background-color: $color-secondry;
+        color: $color-white;
+    }
+
+    &--ghost-trans {
+        background-color: rgba($color-white, .1);
+        color: $color-white;
+    }
+
+    &--ghost-line {
+        border: 2px solid $color-white;
+        background-color: rgba(0,0,0,0);
+        color: $color-white;
+    }
+
+    &--ghost-blue {
+        background-color: rgba($color-blue, .1);
+        color: $color-blue;
+        font-weight: 900;
+    }
+}

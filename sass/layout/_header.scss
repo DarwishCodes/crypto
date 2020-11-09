@@ -1,0 +1,11 @@
+.header {
+    background-image: linear-gradient(to right bottom, rgba($color-primary, 1), rgba($color-primary-dark, 1));
+
+    &__heading-box {
+        margin-top: 12rem;
+    }
+
+    &__image {
+        width: 100%;
+    }
+}
