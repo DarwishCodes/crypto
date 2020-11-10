@@ -1,3 +1,17 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
 [data-aos="move-up"] {
   transform: translateY(1rem);
   opacity: 0;
@@ -5,12 +19,26 @@
   [data-aos="move-up"].aos-animate {
     transform: translateY(0);
     opacity: 1; }
+  @media only screen and (max-width: 56.25em) {
+    [data-aos="move-up"] {
+      transform: translateY(0);
+      opacity: 1;
+      transition-property: transform, opacity; }
+      [data-aos="move-up"].aos-animate {
+        transform: translateY(0);
+        opacity: 1; } }
 
 [data-aos="show-item"] {
   opacity: 0;
   transition-property: opacity; }
   [data-aos="show-item"].aos-animate {
     opacity: 1; }
+  @media only screen and (max-width: 56.25em) {
+    [data-aos="show-item"] {
+      opacity: 1;
+      transition-property: opacity; }
+      [data-aos="show-item"].aos-animate {
+        opacity: 1; } }
 
 *,
 *::after,
@@ -216,7 +244,7 @@ body {
     .form__input--width-large {
       width: 40rem; }
     .form__input--width-small {
-      width: 12rem; }
+      width: 100%; }
     .form__input::-webkit-input-placeholder {
       font-size: 1.1rem; }
   .form__icon {
@@ -293,6 +321,13 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -301,6 +336,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -327,6 +369,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: baseline; }
+    @media only screen and (max-width: 56.25em) {
+      .navigation__bar {
+        flex-direction: column; } }
   .navigation__list {
     list-style: none; }
   .navigation__item {

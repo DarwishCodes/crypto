@@ -5,6 +5,10 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
     }
     
     &__list {

@@ -8,6 +8,16 @@
         opacity: 1;
     }
 
+    @include respond(tab-port) {
+      transform: translateY(0);
+      opacity: 1;
+      transition-property: transform, opacity;
+      &.aos-animate {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+
   }
 
   [data-aos="show-item"] {
@@ -18,4 +28,11 @@
         opacity: 1;
     }
 
+    @include respond(tab-port) {
+      opacity: 1;
+      transition-property: opacity;
+      &.aos-animate {
+          opacity: 1;
+      }
+    }
   }
